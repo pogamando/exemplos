@@ -7,7 +7,7 @@ export class CrudService {
 
     constructor(subResource: string) {
         const restangular = InjectorUtils.lookup(Restangular);
-        this._endpoint = restangular.one(subResource);
+        this._endpoint = restangular.all(subResource);
     }
 
     public find(id: number | string): any {
